@@ -1,0 +1,67 @@
+{
+  "_setsumei": "写して settings.json にし、自分の数字に直す。初期値は始めたばかりの人向けの『安全側』（利益を小さく見る・危ない物を多めに外す）の置き方。売れた実績が出たら自分のデータで直す",
+
+  "hantei": {
+    "rank_max": 100000,
+    "_rank_max": "ランキング（売れ筋の順位）がこれより下（数字が大きい）は売れにくいとみて外す",
+    "uriage_tsuki_min": 30,
+    "_uriage_tsuki_min": "月に売れる数の見込みがこれ未満は外す",
+    "shuppinsha_min": 3,
+    "_shuppinsha_min": "出品者がこれ未満は外す（1〜2人はメーカー・独占の恐れ）",
+    "shuppinsha_per_uriage_max": 0.1,
+    "_shuppinsha_per_uriage_max": "出品者の数 ÷ 月の販売数 がこれを超えたら外す（需要より出品者が多い）",
+    "hontai_cart_max": 0.5,
+    "_hontai_cart_max": "売り場本体のカート取得の割合がこれを超えたら外す（90日・365日の両方で見る）",
+    "jibun_hassou_cart_min": 0.2,
+    "_jibun_hassou_cart_min": "自己発送の出品者がカートを取った割合がこれ未満なら外す（自己発送で売る人だけ使う）",
+    "kakaku_sagari_ok": false,
+    "_kakaku_sagari_ok": "今 < 90日平均 < 180日平均（下がり続け）を通すか。false=外す",
+    "kakaku_kotei_hi": 60,
+    "_kakaku_kotei_hi": "値段がこの日数ずっと同じなら外す（値段を守っているメーカーの合図）",
+    "shuppinsha_kyuugen_ritsu": 0.5,
+    "_shuppinsha_kyuugen_ritsu": "30日で出品者がこの割合以上減り、売れ行きは落ちていない → 権利の申し立ての恐れとして外す",
+    "hyouka_min": 3.5,
+    "kinshi_kategori": ["医薬品", "ドラッグストア", "ビューティー", "医療機器", "酒類", "たばこ", "チケット", "食品", "化粧品", "サプリメント"],
+    "_kinshi_kategori": "このキットの初期値で外すカテゴリ。売り場の許可・法律の許可を取ったら外してよい（05-kiyaku.md）"
+  },
+
+  "rieki": {
+    "mokuhyo_roi": 0.30,
+    "_mokuhyo_roi": "利益 ÷ 仕入れ値 の目標",
+    "saitei_rieki_en": 500,
+    "_saitei_rieki_en": "1件あたりの最低利益（円）。率が高くても額が小さすぎる物は外す",
+    "fee_rate_karioki": 0.15,
+    "_fee_rate_karioki": "実際の手数料が取れないときの仮置き（高めに置く）",
+    "fee_kotei_en": 0,
+    "_fee_kotei_en": "1件ごとの固定の手数料（成約料など）があれば入れる。売り場の最新の料金表で確かめる",
+    "souryou_en": 600,
+    "_souryou_en": "購入者へ送る送料（自分の契約の実額に直す）",
+    "konpou_en": 80,
+    "shiire_souryou_en": 0,
+    "_shiire_souryou_en": "仕入れ先から自分の所までの送料（1件あたり）",
+    "henpin_hikiate_ritsu": 0.03,
+    "_henpin_hikiate_ritsu": "返品・破損の損を売値の何割で見込むか（根拠のない仮置き。実績で直す）",
+    "kawase_jpy_per_usd": null,
+    "_kawase": "海外から仕入れるときだけ。null なら道具が止まる（推測で置かない）",
+    "uriage_kagen_en": 1500,
+    "_uriage_kagen_en": "売値がこれ未満は外す（固定費に負ける）",
+    "uriage_jougen_en": 30000,
+    "_uriage_jougen_en": "売値がこれを超える物は、1回の事故（破損・盗難・返品）に耐えられる額か考えてから。初期値は外す"
+  },
+
+  "minaoshi": {
+    "shiire_zaiko_min": 3,
+    "_shiire_zaiko_min": "仕入れ先の在庫がこれ以下なら出品を止める案",
+    "neage_ritsu_alert": 0.05,
+    "_neage_ritsu_alert": "仕入れ値がこの割合以上上がったら知らせる",
+    "kyougou_sa_max": 0.03,
+    "_kyougou_sa_max": "下限より上で、最安からこの割合までなら合わせてよい"
+  },
+
+  "shuppin": {
+    "hassou_nissuu": "ご注文から3〜5日以内に発送します",
+    "_hassou_nissuu": "本当にできる日数を書く。売り場の設定（出荷までの日数）とそろえる",
+    "kinshi_go": ["最安", "日本一", "絶対", "必ず痩せる", "治る", "効く", "100%", "完全", "正規品保証"],
+    "_kinshi_go": "根拠を示せない言い切り・効き目の表現は書かない（景品表示法・薬機法の恐れ）"
+  }
+}
